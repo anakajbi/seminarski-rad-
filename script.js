@@ -2,7 +2,7 @@
 const CLIENT_ID = '43zOidiYG7zNcLYZ';
 
 const drone = new ScaleDrone(CLIENT_ID, {
-  data: { // Will be sent out as clientData via events
+  data: { 
     name: getRandomName(),
     color: getRandomColor(),
   },
@@ -44,7 +44,6 @@ drone.on('open', error => {
     if (member) {
       addMessageToListDOM(text, member);
     } else {
-      // Message is from server
     }
   });
 });
@@ -58,8 +57,8 @@ drone.on('error', error => {
 });
 
 function getRandomName() {
-  const adjs = ["autumn", "hidden", "bitter", "misty", "silent", "empty", "dry", "dark", "summer", "icy", "delicate", "quiet", "white", "cool", "spring", "winter", "patient", "twilight", "dawn", "crimson", "wispy", "weathered", "blue", "billowing", "broken", "cold", "damp", "falling", "frosty", "green", "long", "late", "lingering", "bold", "little", "morning", "muddy", "old", "red", "rough", "still", "small", "sparkling", "throbbing", "shy", "wandering", "withered", "wild", "black", "young", "holy", "solitary", "fragrant", "aged", "snowy", "proud", "floral", "restless", "divine", "polished", "ancient", "purple", "lively", "nameless"];
-  const nouns = ["waterfall", "river", "breeze", "moon", "rain", "wind", "sea", "morning", "snow", "lake", "sunset", "pine", "shadow", "leaf", "dawn", "glitter", "forest", "hill", "cloud", "meadow", "sun", "glade", "bird", "brook", "butterfly", "bush", "dew", "dust", "field", "fire", "flower", "firefly", "feather", "grass", "haze", "mountain", "night", "pond", "darkness", "snowflake", "silence", "sound", "sky", "shape", "surf", "thunder", "violet", "water", "wildflower", "wave", "water", "resonance", "sun", "wood", "dream", "cherry", "tree", "fog", "frost", "voice", "paper", "frog", "smoke", "star"];
+  const adjs = ["jasna", "zoki", "ana", "marko", "ivan", "pero", "anamarija", "dino", "eva", "petra", "iva", "stela"];
+  const nouns = ["jurica", "mihael", "maša", "ena", "dina", "rita","hana", "marija", "anja", "krešo", "ivana", "petra"];
   return (
     adjs[Math.floor(Math.random() * adjs.length)] +
     "_" +
@@ -71,7 +70,7 @@ function getRandomColor() {
   return '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16);
 }
 
-//------------- DOM STUFF
+
 
 const DOM = {
   membersCount: document.querySelector('.members-count'),
@@ -128,4 +127,3 @@ function addMessageToListDOM(text, member) {
     el.scrollTop = el.scrollHeight - el.clientHeight;
   }
 }
-
