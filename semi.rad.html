@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html>
+<h1>
+<img src="LOGO.jpg" width="200" height="200">
+</h1>
 <head>
   <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
   <script type='text/javascript' src='http://0.0.0.0:8080/scaledrone.js'></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
+  <body>
+    <div class="members-count">-</div>
+    <div class="members-list">-</div>
+    <div class="messages"></div>
+    <form class="message-form" onsubmit="return false;">
+    <input class="message-form__input" placeholder="Type a message.." type="text"/>
+    <input class="message-form__button" value="Send" type="submit"/>
+    </form>
+    <script src="./seminarski.js"></script>
+  </body>
+
   <style>
+    
     body {
       box-sizing: border-box;
       margin: 0;
@@ -14,12 +29,14 @@
       flex-direction: column;
       max-height: 100vh;
       font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    }
+     }
 
     .members-count,
     .members-list,
-    .messages {
-      border: 1px solid #e9e910;
+    .messages 
+    {
+      border: 1px solid #bb21bd;
+      border-radius: 12px;
       padding: 15px;
       margin-bottom: 15px;
     }
@@ -47,23 +64,25 @@
     }
     .message-form__input {
       flex-grow: 1;
-      border: 1px solid #c21d1d;
+      border: 1px solid #bb21bd;
+      border-radius: 12px;
       padding: 10px 15px;
       font-size: 16px;
     }
     .message-form__button {
       margin: 10px;
-    }
-  </style>
+      background-color: #6b065d;
+      border: none;
+      border-radius: 12px;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      }
+    
+</style>
 </head>
-<body>
-  <div class="members-count">-</div>
-  <div class="members-list">-</div>
-  <div class="messages"></div>
-  <form class="message-form" onsubmit="return false;">
-    <input class="message-form__input" placeholder="Type a message.." type="text"/>
-    <input class="message-form__button" value="Send" type="submit"/>
-  </form>
-  <script src="./seminarski.js"></script>
-</body>
 </html>
+  
