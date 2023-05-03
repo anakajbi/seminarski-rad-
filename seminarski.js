@@ -57,8 +57,8 @@ drone.on('error', error => {
 });
 
 function getRandomName() {
-  const adjs = ["jasna", "zoki", "ana", "marko", "ivan", "pero", "anamarija", "dino", "eva", "petra", "iva", "stela"];
-  const nouns = ["jurica", "mihael", "maša", "ena", "dina", "rita","hana", "marija", "anja", "krešo", "ivana", "petra" ];
+  const adjs = ["rita", "zoki", "ana", "murtic", "ivan", "pero", "toni", "dino", "eva", "duga", "iva", "stela"];
+  const nouns = ["tuga", "roki", "more", "livada", "rijeka", "kiša","jesen", "vjetar", "sunce", "oblak", "smijeh", "tuga" ];
   return (
     adjs[Math.floor(Math.random() * adjs.length)] +
     "_" +
